@@ -1,0 +1,30 @@
+---
+layout: default
+title: Index
+---
+
+	<article>
+		<header>
+			<h1><a href='{{ paginator.posts[0].url }}'>{{ site.posts.first.title }}</a></h1>
+		</header>
+		<aside class="gutter">
+		  	<time datetime="{{ paginator.posts[0].date }}">{{ site.posts.first.date | date_to_long_string }}</time>
+			<br>
+		    {% unless site.posts.first.tags == empty %}
+			<ul class="tag_box">
+				{% assign tags_list = site.posts.first.tags %}
+				{% include JB/tags_list %}
+			</ul>
+		    {% endunless %}
+		
+		</aside>
+		<div class="content">
+			{{ site.posts.first.content }}
+		</div>
+	</article>
+
+{% assign pagination = site.posts.first %}
+{% include pagination.html %}
+
+
+

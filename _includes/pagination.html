@@ -1,0 +1,8 @@
+<section class="pagination">
+	{% if pagination.next %}
+	<a href="{{ pagination.next.url }}" class="next">&laquo; Next</a>
+	{% endif %}
+	{% if pagination.previous %}
+	<a href="{{ pagination.previous.url }}" class="prev">Previous &raquo;</a>
+	{% endif %}
+</section>

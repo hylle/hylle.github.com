@@ -19,12 +19,14 @@ Usage:
   	
   This helper can be seen in use at: ../_layouts/default.html
 -->{% endcomment %}
+{% assign not_empty = true %}
 
 {% if site.JB.pages_list.provider == "custom" %}
   {% include custom/pages_list %}
 {% else %}
   {% for node in pages_list %}
     {% if group == null or group == node.group %}
+		{% assign not_empty = false %}
     	{% if page.url == node.url %}
     	<li class="active"><a href="{{ BASE_PATH }}{{node.url}}" class="active">{{node.title}}</a></li>
     	{% else %}
@@ -32,6 +34,10 @@ Usage:
     	{% endif %}
     {% endif %}
   {% endfor %}
+  {% if not_empty == true %}
+  	<li>Nothing to see here.</li>
+  {% endif %}
 {% endif %}
+{% assign not_empty = nil %}
 {% assign pages_list = nil %}
 {% assign group = nil %}
