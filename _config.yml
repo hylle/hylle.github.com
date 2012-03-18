@@ -12,7 +12,7 @@ paginate: 6
 #
 title: whiletrue
 tagline: no tagline
-description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut."
+description: "Whiletrue is a personal blog about a few <strike>nerdy</strike> awesome subjects, some of them will be related to communication, learning and usability, but mostly it will be about the web."
 author:
   name: Jakob Hyldtoft
   email: blah@email.test
@@ -83,7 +83,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : jekyllbootstrap
+      short_name : whiletrue
     livefyre :
       site_id : 123
     intensedebate :
@@ -101,7 +101,7 @@ JB :
   analytics :
     provider : google 
     google : 
-        tracking_id : 'UA-123-12'
+        tracking_id : 'UA-3561498-4'
     getclicky :
       site_id : 
     mixpanel :
